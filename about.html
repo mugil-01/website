@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>About Us — Unifi Data Management Consultancy</title>
+<meta name="description" content="Unifi — expertise in data management, cloud, and business intelligence to drive your success." />
+<meta name="theme-color" content="#000000" />
+<link rel="preconnect" href="https://api.fontshare.com" />
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --bg:#000000;
+    --panel:#0a0a0c;
+    --line:rgba(255,255,255,.10);
+    --fg:#ffffff;
+    --muted:#8d93a1;
+    --blue:#3f8ef7;
+    --violet:#8b7cf6;
+    --radius:14px;
+    /* the exact button shadow language used across the design */
+    --btn-shadow:
+      inset 0 1px 0 rgba(255,255,255,.14),
+      inset 0 -1px 0 rgba(0,0,0,.6),
+      0 1px 2px rgba(0,0,0,.9),
+      0 8px 24px -8px rgba(63,142,247,.45);
+  }
+  *{box-sizing:border-box}
+  html{background:var(--bg);-webkit-font-smoothing:antialiased;scroll-behavior:smooth}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--fg);
+    font-family:"Satoshi","Satoshi Fallback",ui-sans-serif,system-ui,sans-serif;
+    font-weight:400;
+    line-height:1.55;
+    overflow-x:hidden;
+  }
+  img{display:block;max-width:100%}
+  a{color:inherit;text-decoration:none}
+  .wrap{width:100%;max-width:1180px;margin:0 auto;padding:0 24px}
+
+  /* gradient text used for headings */
+  .grad-text{
+    background:linear-gradient(180deg,#ffffff 0%,#ffffff 45%,#9aa3b4 100%);
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+  }
+  .grad-blue{
+    background:linear-gradient(100deg,#7cc0ff 0%,#3f8ef7 40%,#a89bff 100%);
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+  }
+
+  /* ---------- nav ---------- */
+  header.nav{position:sticky;top:0;z-index:50;background:rgba(0,0,0,.72);backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.06)}
+  .nav-in{display:flex;align-items:center;gap:36px;height:64px}
+  .logo{font-size:26px;font-weight:900;letter-spacing:-.03em;display:flex;align-items:center}
+  .logo .u{color:var(--blue)}
+  .nav-links{display:none;gap:26px;margin-left:auto;font-size:13.5px;color:#d7dae1}
+  .nav-links a{display:inline-flex;align-items:center;gap:5px;transition:color .2s}
+  .nav-links a:hover{color:var(--blue)}
+  .caret{width:9px;height:9px;opacity:.6}
+  .btn{
+    font-family:inherit;font-size:13px;font-weight:500;color:#fff;cursor:pointer;
+    padding:9px 18px;border-radius:10px;border:1px solid rgba(255,255,255,.16);
+    background:linear-gradient(180deg,#1b1e26 0%,#0b0c10 100%);
+    box-shadow:var(--btn-shadow);
+    transition:transform .18s ease, box-shadow .25s ease, border-color .25s ease;
+  }
+  .btn:hover{transform:translateY(-1px);border-color:rgba(63,142,247,.55);
+    box-shadow:inset 0 1px 0 rgba(255,255,255,.2),inset 0 -1px 0 rgba(0,0,0,.6),0 2px 4px rgba(0,0,0,.9),0 14px 34px -10px rgba(63,142,247,.7)}
+  .btn:active{transform:translateY(0)}
+  .nav .btn{margin-left:auto}
+  @media(min-width:1024px){.nav-links{display:flex}.nav .btn{margin-left:0}}
+
+  /* ---------- section chrome ---------- */
+  section{position:relative}
+  .pill{
+    display:inline-block;font-size:11.5px;letter-spacing:.01em;padding:5px 14px;border-radius:999px;
+    background:linear-gradient(180deg,rgba(139,124,246,.5),rgba(90,80,190,.28));
+    border:1px solid rgba(160,150,255,.35);color:#e8e6ff;
+    box-shadow:0 6px 20px -10px rgba(139,124,246,.9);
+  }
+  h1,h2,h3,h4{margin:0;font-weight:500;letter-spacing:-.02em;line-height:1.15}
+  .lead{color:var(--muted);font-size:14.5px;max-width:640px;margin:14px auto 0;line-height:1.6}
+  .center{text-align:center}
+
+  /* ---------- hero ---------- */
+  .hero{padding:60px 0 40px;overflow:hidden}
+  .hero h1{font-size:clamp(38px,6vw,58px);font-weight:500}
+  .hero-stage{position:relative;margin-top:26px;min-height:340px;display:flex;align-items:center;justify-content:center}
+  .hero-glow{
+    position:absolute;width:min(760px,92vw);aspect-ratio:1;border-radius:50%;
+    background:radial-gradient(circle,rgba(46,110,255,.42) 0%,rgba(30,60,180,.16) 42%,transparent 70%);
+    filter:blur(6px);pointer-events:none;
+  }
+  .hero-img{position:relative;width:min(430px,72vw);mask-image:radial-gradient(ellipse at center,#000 62%,transparent 96%);-webkit-mask-image:radial-gradient(ellipse at center,#000 62%,transparent 96%)}
+  .stat{
+    border-radius:var(--radius);border:1px solid var(--line);
+    background:linear-gradient(180deg,rgba(28,30,38,.9) 0%,rgba(8,9,12,.92) 100%);
+    box-shadow:var(--btn-shadow);
+    padding:14px 22px;text-align:center;min-width:104px;
+  }
+  .stat b{display:block;font-size:24px;font-weight:700;letter-spacing:-.03em}
+  .stat span{font-size:11.5px;color:var(--muted)}
+  .stat-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;justify-items:center;margin-top:8px}
+  @media(min-width:900px){
+    .stat-row{display:none}
+    .stat-abs{position:absolute}
+    .s1{top:6%;left:6%}.s2{top:10%;right:6%}
+    .s3{bottom:14%;left:0}.s4{bottom:14%;right:0}
+  }
+  @media(max-width:899px){.stat-abs{display:none}}
+
+  /* ---------- services dropdown ---------- */
+  .menu{position:relative;display:inline-flex}
+  .menu > .trigger{font-family:inherit;font-size:13.5px;color:inherit;background:none;border:0;padding:0;
+    cursor:pointer;display:inline-flex;align-items:center;gap:5px;transition:color .2s}
+  .menu > .trigger:hover,.menu[data-open="true"] > .trigger{color:var(--blue)}
+  .menu[data-open="true"] .caret{transform:rotate(180deg)}
+  .menu-panel{
+    position:absolute;top:calc(100% + 14px);left:-14px;min-width:216px;z-index:60;
+    padding:7px;border-radius:12px;border:1px solid rgba(255,255,255,.14);
+    background:linear-gradient(180deg,#14161d 0%,#08090d 100%);
+    box-shadow:var(--btn-shadow);
+    opacity:0;visibility:hidden;transform:translateY(-6px);
+    transition:opacity .2s ease,transform .2s ease,visibility .2s;
+  }
+  .menu[data-open="true"] .menu-panel{opacity:1;visibility:visible;transform:translateY(0)}
+  /* invisible bridge so the pointer can travel from trigger to panel */
+  .menu-panel::before{content:"";position:absolute;left:0;right:0;top:-14px;height:14px}
+  .menu-panel a{display:flex;align-items:center;gap:10px;padding:9px 11px;border-radius:8px;
+    font-size:12.5px;color:#d7dae1;transition:background .2s,color .2s}
+  .menu-panel a:hover,.menu-panel a:focus-visible{background:rgba(63,142,247,.14);color:#fff;outline:none}
+  .menu-panel a[aria-current="page"]{background:rgba(63,142,247,.16);color:#fff}
+  .menu-panel a .dot{flex:none;width:5px;height:5px;border-radius:50%;background:var(--blue);
+    box-shadow:0 0 8px 2px rgba(63,142,247,.75)}
+
+  /* ---------- principles ---------- */
+  .principles{
+    padding:70px 0 0;
+    background:
+      radial-gradient(900px 520px at 50% 0%,rgba(40,52,150,.35),transparent 70%),
+      linear-gradient(180deg,#04060f 0%,#000 100%);
+  }
+  .principles h2{font-size:clamp(28px,4.4vw,40px);margin-top:18px}
+  .quote{color:#9aa1b0;font-style:italic;font-size:13.5px;margin-top:14px;line-height:1.7}
+  .portal{position:relative;margin:30px auto 0;max-width:560px}
+  .portal img{width:100%;aspect-ratio:16/11;object-fit:cover;opacity:.62;
+    mask-image:radial-gradient(ellipse at center,#000 40%,transparent 82%);
+    -webkit-mask-image:radial-gradient(ellipse at center,#000 40%,transparent 82%)}
+  .portal h3{position:absolute;left:0;right:0;top:44%;text-align:center;font-size:clamp(19px,2.6vw,24px);font-weight:400;text-shadow:0 2px 18px rgba(0,0,0,.9)}
+
+  .grid6{display:grid;grid-template-columns:repeat(1,1fr);border-top:1px solid var(--line);margin-top:20px}
+  .cell{padding:30px 20px;text-align:center;border-bottom:1px solid var(--line)}
+  .cell svg{width:20px;height:20px;stroke:#c3c9d6;margin:0 auto 12px;display:block}
+  .cell strong{display:block;font-size:13px;font-weight:500}
+  .cell span{font-size:11.5px;color:var(--muted)}
+  @media(min-width:700px){.grid6{grid-template-columns:repeat(3,1fr)}.cell+.cell{border-left:1px solid var(--line)}.cell:nth-child(3n+1){border-left:none}}
+
+  /* ---------- vision ---------- */
+  .vision{padding:90px 0}
+  .vision-grid{display:grid;gap:34px;grid-template-columns:1fr}
+  .vision h2{font-size:clamp(30px,4vw,38px);margin-top:18px;font-weight:400}
+  .vision p.body{color:var(--muted);font-size:12.5px;margin-top:16px;max-width:330px;line-height:1.75}
+  .vision-img{border-radius:6px;overflow:hidden;border:1px solid var(--line);aspect-ratio:4/5;background:#05070d}
+  .vision-img img{width:100%;height:100%;object-fit:contain;object-position:center;transform:scale(1.22)}
+  .facts{display:flex;flex-direction:column;gap:26px}
+  .fact h4{display:flex;align-items:center;gap:9px;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:700}
+  .sq{width:7px;height:7px;background:var(--blue);display:inline-block}
+  .fact p{color:var(--muted);font-size:11.5px;margin:10px 0 0;line-height:1.85}
+  @media(min-width:960px){
+    .vision-grid{grid-template-columns:1fr 1px 1fr 1fr;gap:40px;align-items:start}
+    .divider{background:var(--line);align-self:stretch}
+  }
+  @media(max-width:959px){.divider{display:none}}
+
+  /* ---------- timeline ---------- */
+  .journey{padding:80px 0 110px;background:radial-gradient(800px 600px at 50% 60%,rgba(20,50,110,.35),transparent 70%)}
+  .journey h2{font-size:clamp(28px,4.2vw,40px);margin-top:18px;max-width:720px;margin-left:auto;margin-right:auto}
+  .journey .quote{max-width:660px;margin-inline:auto}
+  .tl{position:relative;margin-top:60px;max-width:860px;margin-inline:auto}
+  .tl::before{content:"";position:absolute;left:31px;top:0;bottom:0;width:1px;background:linear-gradient(180deg,transparent,rgba(90,150,255,.55),transparent)}
+  .step{position:relative;display:grid;grid-template-columns:64px 1fr;gap:22px;padding-bottom:52px}
+  .node{
+    width:64px;height:64px;border-radius:50%;display:grid;place-items:center;
+    border:1px solid rgba(90,150,255,.55);background:radial-gradient(circle,rgba(10,30,70,.9),rgba(0,0,0,.9));
+    box-shadow:0 0 0 6px rgba(63,142,247,.06),0 0 30px -6px rgba(63,142,247,.7);
+  }
+  .node svg{width:22px;height:22px;stroke:#9ec5ff}
+  .step-body .num{font-size:22px;font-weight:500;color:#7cb2ff;letter-spacing:-.02em}
+  .step-body h4{font-size:13px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;margin-top:2px}
+  .step-body p{color:var(--muted);font-size:12px;margin:8px 0 0;max-width:300px;line-height:1.7}
+  @media(min-width:860px){
+    .tl::before{left:50%}
+    .step{grid-template-columns:1fr 64px 1fr;gap:34px;align-items:center}
+    .step .node{grid-column:2}
+    .step.right .step-body{grid-column:3;text-align:left}
+    .step.left .step-body{grid-column:1;grid-row:1;text-align:right}
+    .step.left .step-body p{margin-left:auto}
+  }
+
+  /* ---------- gallery ---------- */
+  .gallery{padding:70px 0 90px;background:linear-gradient(180deg,#05070d 0%,#000 60%)}
+  .g-grid{display:grid;gap:14px;margin-top:40px;grid-template-columns:1fr}
+  .tile{position:relative;border-radius:8px;overflow:hidden;border:1px solid var(--line)}
+  .tile img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
+  .tile:hover img{transform:scale(1.04)}
+  .tile::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(0,0,0,.85) 100%)}
+  .cap{position:absolute;left:18px;bottom:16px;z-index:2}
+  .cap b{font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:700}
+  .cap i{display:block;width:22px;height:2px;background:var(--blue);margin-top:7px}
+  .tile.wide img{aspect-ratio:16/7}
+  .tile.small img{aspect-ratio:16/10}
+  .tile.more{display:grid;place-items:center}
+  .tile.more img{aspect-ratio:16/10;opacity:.35}
+  .more-txt{position:absolute;z-index:2;text-align:center}
+  .more-txt b{font-size:30px;font-weight:500;letter-spacing:-.02em}
+  .more-txt span{display:block;font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:#c3c9d6;margin-top:4px}
+  @media(min-width:760px){
+    .g-grid{grid-template-columns:1fr 1fr}
+    .tile.wide{grid-column:1/-1}
+  }
+
+  /* ---------- footer ---------- */
+  .foot-shell{padding:0 24px 34px}
+  footer{
+    max-width:1180px;margin:0 auto;border-radius:18px;padding:44px 40px 26px;
+    background:linear-gradient(180deg,#ffffff 0%,#f3f4f6 100%);color:#111319;
+  }
+  .foot-top{display:grid;gap:32px;grid-template-columns:1fr}
+  .foot-top p{color:#5b6070;font-size:13px;margin:14px 0 0;max-width:220px}
+  .col h5{margin:0 0 14px;font-size:14px;font-weight:700}
+  .col a{display:block;font-size:12.5px;color:#5b6070;padding:3px 0;transition:color .2s}
+  .col a:hover{color:var(--blue)}
+  .foot-bottom{margin-top:36px;padding-top:18px;border-top:1px solid rgba(0,0,0,.08);text-align:center;font-size:12.5px;color:#5b6070}
+  .foot-bottom a{color:#111319;font-weight:500}
+  @media(min-width:820px){.foot-top{grid-template-columns:1.2fr 1fr 1fr 1fr}}
+</style>
+</head>
+<body>
+
+<!-- ================= NAV ================= -->
+<header class="nav">
+  <div class="wrap nav-in">
+    <!-- <a class="logo" href="#"><span class="u">U</span>nifi</a> -->
+    <a class="logo" href="#"><img src="images/logo.png" height="40" width="65" alt=""></a>
+    <nav class="nav-links" aria-label="Main">
+      <a href="home.html">Home</a>
+      <a href="#">Solution <svg class="caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 9l6 6 6-6"/></svg></a>
+      <!-- <a href="#">Services <svg class="caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 9l6 6 6-6"/></svg></a> -->
+       <!-- Services dropdown -->
+      <div class="menu" id="svcMenu" data-open="false">
+        <button class="trigger" type="button" id="svcTrigger" aria-expanded="false" aria-haspopup="true" aria-controls="svcPanel">
+          Services
+          <svg class="caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="menu-panel" id="svcPanel" role="menu" aria-labelledby="svcTrigger">
+          <a role="menuitem" href="data-management-service.html"><span class="dot"></span>Data Management</a>
+          <a role="menuitem" href="data-governance-service.html"><span class="dot"></span>Data Governance</a>
+        </div>
+      </div>
+
+      <a href="#">Products</a>
+      <a href="#">Company <svg class="caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 9l6 6 6-6"/></svg></a>
+      <a href="case-studies.html">Case Studies</a>
+      <a href="#">Careers</a>
+    </nav>
+    <button class="btn" type="button">Talk to Experts</button>
+  </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero">
+  <div class="wrap center">
+    <h1 class="grad-text">About Us</h1>
+    <p class="lead">Expertise in data management, cloud, and business intelligence to drive your success.</p>
+
+    <div class="hero-stage">
+      <div class="hero-glow" aria-hidden="true"></div>
+      <img class="hero-img" src="images/About/Black and White Modern Initial K Business Logo(9) 2.png" alt="Wireframe illustration of a human head rendered in neon contour lines" />
+
+      <div class="stat stat-abs s1"><b>60+</b><span>Customers</span></div>
+      <div class="stat stat-abs s2"><b>4</b><span>Countries</span></div>
+      <div class="stat stat-abs s3"><b>100+</b><span>Projects</span></div>
+      <div class="stat stat-abs s4"><b>5+</b><span>Years</span></div>
+    </div>
+
+    <div class="stat-row">
+      <div class="stat"><b>60+</b><span>Customers</span></div>
+      <div class="stat"><b>4</b><span>Countries</span></div>
+      <div class="stat"><b>100+</b><span>Projects</span></div>
+      <div class="stat"><b>5+</b><span>Years</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PRINCIPLES ================= -->
+<section class="principles">
+  <div class="wrap center">
+    <span class="pill">Our Principles</span>
+    <h2><span class="grad-text">We </span><span class="grad-blue">Transfer</span><span class="grad-text"> Your Data Into impact</span></h2>
+    <p class="quote">&ldquo; Where data becomes intelligence and intelligence becomes impact<br />That drives smarter decisions and meaningful business growth. &rdquo;</p>
+
+    <div class="portal">
+      <img src="images/About/q-6c12dbae.png.png" alt="Beam of blue light forming a doorway in a dark digital space" />
+      <h3 class="grad-text">What Principles Guide Us?</h3>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="grid6">
+      <div class="cell">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M12 15a3 3 0 003-3V6a3 3 0 00-6 0v6a3 3 0 003 3zM5 11a7 7 0 0014 0M12 18v3"/></svg>
+        <strong>Integrity</strong><span>Trust in every action</span>
+      </div>
+      <div class="cell">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 8h6M9 12h6M9 16h3"/></svg>
+        <strong>Focus</strong><span>Clarity in every decision</span>
+      </div>
+      <div class="cell">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M8 15l3-4 2 2 3-5"/></svg>
+        <strong>Agile</strong><span>Adapt to every change</span>
+      </div>
+      <div class="cell">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M12 20s-7-4.5-7-9a4 4 0 017-2.5A4 4 0 0119 11c0 4.5-7 9-7 9z"/></svg>
+        <strong>Empathetic</strong><span>People at the center</span>
+      </div>
+      <div class="cell">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="10" r="2.5"/><path d="M3 19c0-3 2.7-5 6-5s6 2 6 5M15.5 19c0-2 1.4-3.4 3.5-3.4S22 17 22 19"/></svg>
+        <strong>Harmony</strong><span>Strength through collaboration</span>
+      </div>
+      <div class="cell">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M12 4l2.4 5 5.6.8-4 3.9 1 5.5-5-2.7-5 2.7 1-5.5-4-3.9 5.6-.8z"/></svg>
+        <strong>Elevate</strong><span>Excellence without limits</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= VISION ================= -->
+<section class="vision">
+  <div class="wrap vision-grid">
+    <div>
+      <span class="pill">Our Foundation</span>
+      <h2 class="grad-text">Our<br />Company<br />Vision</h2>
+      <p class="body">Envisioning a world where every individual is empowered to reach their fullest potential, where innovation thrives, and where global communities unite in pursuit of a sustainable and prosperous future.</p>
+    </div>
+
+    <div class="divider" aria-hidden="true"></div>
+
+    <div class="vision-img">
+      <img src="images/About/image 261.png" alt="Modern glass skyscraper photographed against a cloudy sky" />
+    </div>
+
+    <div class="facts">
+      <div class="fact">
+        <h4><span class="sq"></span> Mission</h4>
+        <p>Our mission is to transform data into meaningful impact. We empower businesses with secure, scalable, and intelligent data solutions that drive smarter decisions, innovation, and sustainable growth.</p>
+      </div>
+      <div class="fact">
+        <h4><span class="sq"></span> Our Values</h4>
+        <p>Integrity, excellence, innovation, and collaboration shape everything we do&mdash;driving trust, quality, bold ideas, and meaningful partnerships while creating lasting value.</p>
+      </div>
+      <div class="fact">
+        <h4><span class="sq"></span> Trust</h4>
+        <p>At Unifi, trust is at the heart of everything we do. We build lasting relationships through integrity, transparency, accountability, and a commitment to delivering excellence&mdash;earning confidence through every interaction.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= JOURNEY ================= -->
+<section class="journey">
+  <div class="wrap center">
+    <span class="pill">Our Growth Journey</span>
+    <h2 class="grad-text">From Foundation to a Future Driven by Data &amp; AI</h2>
+    <p class="quote">Building capabilities, expanding our presence, and Evolving into a trusted Data &amp; AI transformation partner.</p>
+  </div>
+
+  <div class="wrap">
+    <ol class="tl" style="list-style:none;padding:0;margin-top:56px">
+      <li class="step right">
+        <div class="node"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M6 21V4M6 4h9l-1.5 3L15 10H6"/></svg></div>
+        <div class="step-body">
+          <div class="num">01</div><h4>Founded - 2022</h4>
+          <p>Started with a focus on modern data management and analytics.</p>
+        </div>
+      </li>
+      <li class="step left">
+        <div class="node"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M12 3l7 3v6c0 4-3 7-7 9-4-2-7-5-7-9V6z"/><path d="M9 12l2 2 4-4"/></svg></div>
+        <div class="step-body">
+          <div class="num">02</div><h4>Building Trust 2022&mdash;23</h4>
+          <p>Built strong customer relationships through enterprise data projects.</p>
+        </div>
+      </li>
+      <li class="step right">
+        <div class="node"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/></svg></div>
+        <div class="step-body">
+          <div class="num">03</div><h4>Regional Expansion 2023&mdash;24</h4>
+          <p>Started with a focus on modern data management and analytics.</p>
+        </div>
+      </li>
+      <li class="step left">
+        <div class="node"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M12 21s7-5.5 7-11a7 7 0 10-14 0c0 5.5 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></div>
+        <div class="step-body">
+          <div class="num">04</div><h4>New Markets 2025&mdash;26</h4>
+          <p>Strengthened Middle East presence with Qatar and Egypt offices.</p>
+        </div>
+      </li>
+      <li class="step right" style="padding-bottom:0">
+        <div class="node"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><ellipse cx="12" cy="6" rx="7" ry="3"/><path d="M5 6v6c0 1.7 3.1 3 7 3s7-1.3 7-3V6M5 12v6c0 1.7 3.1 3 7 3s7-1.3 7-3v-6"/></svg></div>
+        <div class="step-body">
+          <div class="num">05</div><h4>Data + AI Today</h4>
+          <p>Evolved into a Data &amp; AI partner driving measurable business impact.</p>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ================= GALLERY ================= -->
+<section class="gallery">
+  <div class="wrap center">
+    <span class="pill">Our Gallery</span>
+    <h2 class="grad-text" style="font-size:clamp(26px,3.8vw,34px);margin-top:16px">Beyond the Workplace</h2>
+    <p class="quote">A glimpse into the people, culture, collaborations, and moments that define who we are.</p>
+  </div>
+
+  <div class="wrap">
+    <div class="g-grid">
+      <figure class="tile wide" style="margin:0">
+        <img src="images/open-workspace.png" alt="Open plan office with desk pods and pendant lighting" />
+        <figcaption class="cap"><b>Open Workspace</b><i></i></figcaption>
+      </figure>
+      <figure class="tile small" style="margin:0">
+        <img src="images/meeting-room.png" alt="Glass walled meeting room with a long conference table" />
+        <figcaption class="cap"><b>Meeting Room</b><i></i></figcaption>
+      </figure>
+      <figure class="tile small" style="margin:0">
+        <img src="images/collaborative.png" alt="Analytics workstation with multiple monitors showing dashboards" />
+        <figcaption class="cap"><b>Collaborative Workspace</b><i></i></figcaption>
+      </figure>
+      <figure class="tile small" style="margin:0">
+        <img src="images/breakout.png" alt="Round table in a breakout area covered with charts and laptops" />
+        <figcaption class="cap"><b>Breakout Area</b><i></i></figcaption>
+      </figure>
+      <a class="tile small more" href="#" aria-label="View all 12 gallery photos">
+        <img src="images/gallery-more.png" alt="" />
+        <span class="more-txt"><b>+12</b><span>View all &nbsp;&rarr;</span></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<div class="foot-shell">
+  <footer>
+    <div class="foot-top">
+      <div>
+        <a class="logo" href="#" style="color:#111319"><span class="u">U</span>nifi</a>
+        <p>Experience the future of data.</p>
+      </div>
+      <div class="col">
+        <h5>About</h5>
+        <a href="#">Home</a><a href="#">About Us</a><a href="#">Experts</a><a href="#">Why Choose Us</a><a href="#">Locations</a><a href="#">Case Studies</a>
+      </div>
+      <div class="col">
+        <h5>Company</h5>
+        <a href="#">Master Data Management</a><a href="#">AI/ML</a><a href="#">Data Quality</a><a href="#">Data Governance</a><a href="#">Data Integration</a><a href="#">Cloud Modernization</a><a href="#">Big Data Analytics</a><a href="#">Data Lake</a><a href="#">Advanced Analytics</a>
+      </div>
+      <div class="col">
+        <h5>Support</h5>
+        <a href="#">Careers</a><a href="#">Contact Us</a><a href="#">Customer Support</a>
+      </div>
+    </div>
+    <div class="foot-bottom">Copyright © 2024, Unifi Data Management Consultancy | <a href="#">Privacy Policy</a></div>
+  </footer>
+</div>
+
+</body>
+</html>
+
+
+
+
+<script>
+  /* Services dropdown: opens on hover (pointer) and on click / keyboard (a11y) */
+  (function(){
+    var menu = document.getElementById('svcMenu');
+    var trigger = document.getElementById('svcTrigger');
+    if(!menu || !trigger) return;
+
+    function setOpen(open){
+      menu.dataset.open = open ? 'true' : 'false';
+      trigger.setAttribute('aria-expanded', open ? 'true' : 'false');
+    }
+
+    // Decide hover-vs-tap from the actual pointer that generated the event rather
+    // than a device media query, which misreports in webviews and headless browsers.
+    var hovering = false;
+
+    menu.addEventListener('pointerenter', function(e){
+      if(e.pointerType === 'mouse'){ hovering = true; setOpen(true); }
+    });
+    menu.addEventListener('pointerleave', function(e){
+      if(e.pointerType === 'mouse'){ hovering = false; setOpen(false); }
+    });
+
+    trigger.addEventListener('click', function(e){
+      e.stopPropagation();
+      // a mouse is already hovering, so the panel is open - never toggle it shut
+      // underneath the pointer; taps (no hover) get a normal toggle.
+      setOpen(hovering ? true : menu.dataset.open !== 'true');
+    });
+
+    // keyboard
+    trigger.addEventListener('keydown', function(e){
+      if(e.key === 'ArrowDown' || e.key === 'Enter' || e.key === ' '){
+        e.preventDefault();
+        setOpen(true);
+        var first = menu.querySelector('.menu-panel a');
+        if(first) first.focus();
+      }
+    });
+    menu.addEventListener('keydown', function(e){
+      if(e.key === 'Escape'){ setOpen(false); trigger.focus(); }
+    });
+    menu.addEventListener('focusout', function(e){
+      if(!menu.contains(e.relatedTarget)) setOpen(false);
+    });
+
+    // click outside
+    document.addEventListener('click', function(e){
+      if(!menu.contains(e.target)) setOpen(false);
+    });
+  })();
+</script>

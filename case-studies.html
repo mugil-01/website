@@ -1,0 +1,1390 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Case Studies — Unifi Data Management Consultancy</title>
+    <meta
+      name="description"
+      content="Discover how Unifi has transformed challenges into success stories for clients across retail, banking, government and automotive."
+    />
+    <meta name="theme-color" content="#000000" />
+    <link rel="preconnect" href="https://api.fontshare.com" />
+    <link
+      href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #000000;
+        --panel: #0a0a0c;
+        --line: rgba(255, 255, 255, 0.1);
+        --fg: #ffffff;
+        --muted: #8d93a1;
+        --blue: #3f8ef7;
+        --violet: #8b7cf6;
+        --radius: 14px;
+        /* the exact button shadow language used across the design */
+        --btn-shadow:
+          inset 0 1px 0 rgba(255, 255, 255, 0.14),
+          inset 0 -1px 0 rgba(0, 0, 0, 0.6), 0 1px 2px rgba(0, 0, 0, 0.9),
+          0 8px 24px -8px rgba(63, 142, 247, 0.45);
+      }
+      * {
+        box-sizing: border-box;
+      }
+      html {
+        background: var(--bg);
+        -webkit-font-smoothing: antialiased;
+        scroll-behavior: smooth;
+      }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--fg);
+        font-family:
+          "Satoshi", "Satoshi Fallback", ui-sans-serif, system-ui, sans-serif;
+        font-weight: 400;
+        line-height: 1.55;
+        overflow-x: hidden;
+      }
+      img {
+        display: block;
+        max-width: 100%;
+      }
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+      .wrap {
+        width: 100%;
+        max-width: 1180px;
+        margin: 0 auto;
+        padding: 0 24px;
+      }
+
+      /* gradient text used for headings */
+      .grad-text {
+        background: linear-gradient(
+          180deg,
+          #ffffff 0%,
+          #ffffff 45%,
+          #9aa3b4 100%
+        );
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+      .grad-blue {
+        background: linear-gradient(
+          100deg,
+          #7cc0ff 0%,
+          #3f8ef7 40%,
+          #a89bff 100%
+        );
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+
+      /* ---------- nav ---------- */
+      header.nav {
+        position: sticky;
+        top: 0;
+        z-index: 50;
+        background: rgba(0, 0, 0, 0.72);
+        backdrop-filter: blur(14px);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+      }
+      .nav-in {
+        display: flex;
+        align-items: center;
+        gap: 36px;
+        height: 64px;
+      }
+      .logo {
+        font-size: 26px;
+        font-weight: 900;
+        letter-spacing: -0.03em;
+        display: flex;
+        align-items: center;
+      }
+      .logo .u {
+        color: var(--blue);
+      }
+      .nav-links {
+        display: none;
+        gap: 26px;
+        margin-left: auto;
+        font-size: 13.5px;
+        color: #d7dae1;
+      }
+      .nav-links a {
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+        transition: color 0.2s;
+      }
+      .nav-links a:hover {
+        color: var(--blue);
+      }
+      .nav-links a.active {
+        color: #fff;
+      }
+      .caret {
+        width: 9px;
+        height: 9px;
+        opacity: 0.6;
+      }
+      .btn {
+        font-family: inherit;
+        font-size: 13px;
+        font-weight: 500;
+        color: #fff;
+        cursor: pointer;
+        padding: 9px 18px;
+        border-radius: 10px;
+        border: 1px solid rgba(255, 255, 255, 0.16);
+        background: linear-gradient(180deg, #1b1e26 0%, #0b0c10 100%);
+        box-shadow: var(--btn-shadow);
+        transition:
+          transform 0.18s ease,
+          box-shadow 0.25s ease,
+          border-color 0.25s ease;
+      }
+      .btn:hover {
+        transform: translateY(-1px);
+        border-color: rgba(63, 142, 247, 0.55);
+        box-shadow:
+          inset 0 1px 0 rgba(255, 255, 255, 0.2),
+          inset 0 -1px 0 rgba(0, 0, 0, 0.6),
+          0 2px 4px rgba(0, 0, 0, 0.9),
+          0 14px 34px -10px rgba(63, 142, 247, 0.7);
+      }
+      .btn:active {
+        transform: translateY(0);
+      }
+      .nav .btn {
+        margin-left: auto;
+      }
+      @media (min-width: 1024px) {
+        .nav-links {
+          display: flex;
+        }
+        .nav .btn {
+          margin-left: 0;
+        }
+      }
+
+      /* blue action button — same shadow language, blue face */
+      .btn-blue {
+        font-family: inherit;
+        font-size: 12.5px;
+        font-weight: 500;
+        color: #fff;
+        cursor: pointer;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 9px 16px;
+        border-radius: 8px;
+        border: none;
+        background: linear-gradient(180deg, #4c9bff 0%, #1e6fe0 100%);
+        box-shadow: var(--btn-shadow);
+        transition:
+          transform 0.18s ease,
+          box-shadow 0.25s ease,
+          border-color 0.25s ease;
+      }
+      .btn-blue:hover {
+        transform: translateY(-1px);
+        border-color: rgba(180, 215, 255, 0.8);
+        box-shadow:
+          inset 0 1px 0 rgba(255, 255, 255, 0.2),
+          inset 0 -1px 0 rgba(0, 0, 0, 0.6),
+          0 2px 4px rgba(0, 0, 0, 0.9),
+          0 14px 34px -10px rgba(63, 142, 247, 0.7);
+      }
+      .btn-blue:active {
+        transform: translateY(0);
+      }
+      .btn-blue svg {
+        width: 12px;
+        height: 12px;
+      }
+
+      /* ---------- section chrome ---------- */
+      section {
+        position: relative;
+      }
+      h1,
+      h2,
+      h3,
+      h4 {
+        margin: 0;
+        font-weight: 500;
+        letter-spacing: -0.02em;
+        line-height: 1.15;
+      }
+      .lead {
+        color: var(--muted);
+        font-size: 14.5px;
+        max-width: 640px;
+        margin: 14px auto 0;
+        line-height: 1.6;
+      }
+      .center {
+        text-align: center;
+      }
+
+      /* ---------- hero ---------- */
+      .hero {
+        padding: 64px 0 30px;
+        overflow: hidden;
+        text-align: center;
+      }
+      .hero::before {
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: -140px;
+        transform: translateX(-50%);
+        width: min(900px, 110vw);
+        height: 520px;
+        pointer-events: none;
+        background: radial-gradient(
+          ellipse 50% 50% at 50% 50%,
+          rgba(78, 60, 220, 0.42) 0%,
+          rgba(46, 80, 210, 0.2) 38%,
+          transparent 72%
+        );
+        filter: blur(10px);
+      }
+      .hero h1 {
+        position: relative;
+        font-size: clamp(36px, 5.6vw, 54px);
+        font-weight: 500;
+      }
+
+      /* ---------- filter bar ---------- */
+      .filter-bar {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 18px;
+        align-items: center;
+        justify-content: space-between;
+        padding: 26px 0 30px;
+        position: relative;
+      }
+      .filter-bar h2 {
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 1.45;
+        max-width: 280px;
+        color: #e8eaf0;
+      }
+      .pills {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+        padding: 5px;
+        border-radius: 999px;
+        background: linear-gradient(
+          180deg,
+          rgba(255, 255, 255, 0.07),
+          rgba(255, 255, 255, 0.02)
+        );
+        border: 1px solid var(--line);
+      }
+      .pills button {
+        font-family: inherit;
+        font-size: 12px;
+        font-weight: 500;
+        color: #aeb4c2;
+        cursor: pointer;
+        padding: 7px 16px;
+        border-radius: 999px;
+        border: none;
+        background: transparent;
+        transition:
+          color 0.2s,
+          background 0.2s,
+          box-shadow 0.25s;
+      }
+      .pills button:hover {
+        color: #fff;
+      }
+      .pills button[aria-selected="true"] {
+        color: #0c0e13;
+        background: linear-gradient(180deg, #ffffff 0%, #d9dde6 100%);
+        border-color: rgba(255, 255, 255, 0.5);
+        box-shadow: var(--btn-shadow);
+      }
+
+      /* ---------- case rows ---------- */
+      .cases {
+        padding-bottom: 70px;
+        display: flex;
+        flex-direction: column;
+        gap: 26px;
+      }
+      .case {
+        position: relative;
+        border-radius: var(--radius);
+        overflow: hidden;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 0;
+        align-items: stretch;
+      }
+      /* alternating deep-blue gradient band behind every other card */
+      .case.tint {
+        background: linear-gradient(
+          100deg,
+          rgba(16, 26, 74, 0.85) 0%,
+          rgba(9, 14, 40, 0.6) 50%,
+          rgba(0, 0, 0, 0) 100%
+        );
+      }
+      .case.tint.flip {
+        background: linear-gradient(
+          260deg,
+          rgba(16, 26, 74, 0.85) 0%,
+          rgba(9, 14, 40, 0.6) 50%,
+          rgba(0, 0, 0, 0) 100%
+        );
+      }
+
+      .case-media {
+        position: relative;
+        overflow: hidden;
+        border-radius: var(--radius);
+        aspect-ratio: 16/10;
+      }
+      .case-media img {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.6s ease;
+      }
+      .case:hover .case-media img {
+        transform: scale(1.04);
+      }
+      .case-media::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          180deg,
+          rgba(0, 0, 0, 0.15),
+          rgba(0, 0, 0, 0.45)
+        );
+      }
+
+      .case-body {
+        padding: 26px 28px 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      .case-body h3 {
+        font-size: clamp(19px, 2.4vw, 25px);
+        font-weight: 500;
+        letter-spacing: -0.025em;
+      }
+      .case-tags {
+        margin: 8px 0 0;
+        font-size: 11.5px;
+        color: #7f86a0;
+        letter-spacing: 0.005em;
+      }
+      .case-body p {
+        margin: 14px 0 0;
+        font-size: 12.5px;
+        line-height: 1.75;
+        color: var(--muted);
+        max-width: 460px;
+      }
+      .case-body .btn-blue {
+        margin-top: 20px;
+        align-self: flex-start;
+      }
+
+      @media (min-width: 900px) {
+        .case {
+          grid-template-columns: 1fr 1fr;
+          gap: 34px;
+        }
+        /* flip = text on the left, image on the right */
+        .case.flip .case-media {
+          order: 2;
+        }
+        .case.flip .case-body {
+          order: 1;
+        }
+        .case-body {
+          padding: 34px 10px 34px 6px;
+        }
+        .case.flip .case-body {
+          padding: 34px 6px 34px 34px;
+        }
+      }
+
+      .case[hidden] {
+        display: none;
+      }
+      .empty {
+        padding: 60px 0;
+        text-align: center;
+        color: var(--muted);
+        font-size: 14px;
+      }
+      .empty[hidden] {
+        display: none;
+      }
+
+      /* ---------- footer ---------- */
+      .foot-shell {
+        padding: 0 24px 34px;
+      }
+      footer {
+        max-width: 1180px;
+        margin: 0 auto;
+        border-radius: 18px;
+        padding: 44px 40px 26px;
+        background: linear-gradient(180deg, #ffffff 0%, #f3f4f6 100%);
+        color: #111319;
+      }
+      .foot-top {
+        display: grid;
+        gap: 32px;
+        grid-template-columns: 1fr;
+      }
+      .foot-top p {
+        color: #5b6070;
+        font-size: 13px;
+        margin: 14px 0 0;
+        max-width: 220px;
+      }
+      .col h5 {
+        margin: 0 0 14px;
+        font-size: 14px;
+        font-weight: 700;
+      }
+      .col a {
+        display: block;
+        font-size: 12.5px;
+        color: #5b6070;
+        padding: 3px 0;
+        transition: color 0.2s;
+      }
+      .col a:hover {
+        color: var(--blue);
+      }
+      .foot-bottom {
+        margin-top: 36px;
+        padding-top: 18px;
+        border-top: 1px solid rgba(0, 0, 0, 0.08);
+        text-align: center;
+        font-size: 12.5px;
+        color: #5b6070;
+      }
+      .foot-bottom a {
+        color: #111319;
+        font-weight: 500;
+      }
+      @media (min-width: 820px) {
+        .foot-top {
+          grid-template-columns: 1.2fr 1fr 1fr 1fr;
+        }
+      }
+
+      /* ---------- services dropdown ---------- */
+      .menu {
+        position: relative;
+        display: inline-flex;
+      }
+      .menu > .trigger {
+        font-family: inherit;
+        font-size: 13.5px;
+        color: inherit;
+        background: none;
+        border: 0;
+        padding: 0;
+        cursor: pointer;
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+        transition: color 0.2s;
+      }
+      .menu > .trigger:hover,
+      .menu[data-open="true"] > .trigger {
+        color: var(--blue);
+      }
+      .menu[data-open="true"] .caret {
+        transform: rotate(180deg);
+      }
+      .menu-panel {
+        position: absolute;
+        top: calc(100% + 14px);
+        left: -14px;
+        min-width: 216px;
+        z-index: 60;
+        padding: 7px;
+        border-radius: 12px;
+        border: 1px solid rgba(255, 255, 255, 0.14);
+        background: linear-gradient(180deg, #14161d 0%, #08090d 100%);
+        box-shadow: var(--btn-shadow);
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-6px);
+        transition:
+          opacity 0.2s ease,
+          transform 0.2s ease,
+          visibility 0.2s;
+      }
+      .menu[data-open="true"] .menu-panel {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+      }
+      /* invisible bridge so the pointer can travel from trigger to panel */
+      .menu-panel::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: -14px;
+        height: 14px;
+      }
+      .menu-panel a {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 9px 11px;
+        border-radius: 8px;
+        font-size: 12.5px;
+        color: #d7dae1;
+        transition:
+          background 0.2s,
+          color 0.2s;
+      }
+      .menu-panel a:hover,
+      .menu-panel a:focus-visible {
+        background: rgba(63, 142, 247, 0.14);
+        color: #fff;
+        outline: none;
+      }
+      .menu-panel a[aria-current="page"] {
+        background: rgba(63, 142, 247, 0.16);
+        color: #fff;
+      }
+      .menu-panel a .dot {
+        flex: none;
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        background: var(--blue);
+        box-shadow: 0 0 8px 2px rgba(63, 142, 247, 0.75);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- ================= NAV ================= -->
+    <header class="nav">
+      <div class="wrap nav-in">
+        <!-- <a class="logo" href="home.html"><span class="u">U</span>nifi</a> -->
+        <a class="logo" href="#"
+          ><img src="images/logo.png" height="40" width="65" alt=""
+        /></a>
+        <nav class="nav-links" aria-label="Main">
+          <a href="home.html">Home</a>
+          <a href="#"
+            >Solution
+            <svg
+              class="caret"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="3"
+            >
+              <path d="M6 9l6 6 6-6" /></svg
+          ></a>
+          <!-- <a href="#">Services <svg class="caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 9l6 6 6-6"/></svg></a> -->
+          <!-- Services dropdown -->
+          <div class="menu" id="svcMenu" data-open="false">
+            <button
+              class="trigger"
+              type="button"
+              id="svcTrigger"
+              aria-expanded="false"
+              aria-haspopup="true"
+              aria-controls="svcPanel"
+            >
+              Services
+              <svg
+                class="caret"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="3"
+              >
+                <path d="M6 9l6 6 6-6" />
+              </svg>
+            </button>
+            <div
+              class="menu-panel"
+              id="svcPanel"
+              role="menu"
+              aria-labelledby="svcTrigger"
+            >
+              <a role="menuitem" href="data-management-service.html"
+                ><span class="dot"></span>Data Management</a
+              >
+              <a role="menuitem" href="data-governance-service.html"
+                ><span class="dot"></span>Data Governance</a
+              >
+            </div>
+          </div>
+
+          <a href="#">Products</a>
+          <a href="about.html"
+            >Company
+            <svg
+              class="caret"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="3"
+            >
+              <path d="M6 9l6 6 6-6" /></svg
+          ></a>
+          <a class="active" href="case-studies.html"
+            >Case Studies
+            <svg
+              class="caret"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="3"
+            >
+              <path d="M6 9l6 6 6-6" /></svg
+          ></a>
+          <a href="career.html">Careers</a>
+        </nav>
+        <button class="btn" type="button">Talk to Experts</button>
+      </div>
+    </header>
+
+    <main>
+      <!-- ================= HERO ================= -->
+      <section class="hero">
+        <div class="wrap">
+          <h1 class="grad-text">Case Studies</h1>
+          <p class="lead">
+            Discover how we&apos;ve transformed challenges into success stories
+            for our clients
+          </p>
+        </div>
+      </section>
+
+      <!-- ================= FILTER BAR ================= -->
+      <section>
+        <div class="wrap filter-bar">
+          <h2>
+            Explore the success stories we&apos;ve created for our clients
+          </h2>
+          <div
+            class="pills"
+            role="tablist"
+            aria-label="Filter case studies by category"
+          >
+            <button
+              role="tab"
+              type="button"
+              aria-selected="true"
+              data-filter="all"
+            >
+              All
+            </button>
+            <button
+              role="tab"
+              type="button"
+              aria-selected="false"
+              data-filter="cloud"
+            >
+              Cloud
+            </button>
+            <button
+              role="tab"
+              type="button"
+              aria-selected="false"
+              data-filter="data"
+            >
+              Data Management
+            </button>
+            <button
+              role="tab"
+              type="button"
+              aria-selected="false"
+              data-filter="compliance"
+            >
+              Compliance
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= CASE STUDIES ================= -->
+      <section>
+        <div class="wrap cases" id="caseList">
+          <!-- 01 -->
+          <article class="case" data-cat="data cloud">
+            <div class="case-media">
+              <img
+                src="images/case-studies/img1.png"
+                alt="Dark retail distribution warehouse with tall stacked aisles lit in blue"
+              />
+            </div>
+            <div class="case-body">
+              <h3>Leading Multinational Retail</h3>
+              <p class="case-tags">
+                Data Governance, Data Quality and MDM Implementation
+              </p>
+              <p>
+                Leading multinational retail franchise operator across Food,
+                Hospitality, Fashion, Home Furnishings, and Pharmacy, partnered
+                with Unifi to modernize its data landscape. The goal was to
+                establish a trusted, enterprise-wide master data foundation
+                covering products, customers, and suppliers, while enabling a
+                scalable and governed cloud-native data platform on Azure.
+              </p>
+              <button class="btn-blue" type="button">
+                View Case Study
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                >
+                  <path d="M5 12h14M13 6l6 6-6 6" />
+                </svg>
+              </button>
+            </div>
+          </article>
+
+          <!-- 02 -->
+          <article class="case" data-cat="data">
+            <div class="case-media">
+              <img
+                src="images/case-studies/image-car.png"
+                alt="Row of luxury sedans in a dark showroom with blue rim lighting"
+              />
+            </div>
+            <div class="case-body">
+              <h3>AW Rostamani Group (AWR)</h3>
+              <p class="case-tags">
+                Data Governance, Data Quality and MDM Implementation
+              </p>
+              <p>
+                AW Rostamani Group (AWR), a leading automotive distributor in
+                the UAE with brands like Nissan, Renault, Infiniti, Chery,
+                Zeekr, and Smart, embarked on a Master Data Governance
+                Implementation program.
+              </p>
+              <button class="btn-blue" type="button">
+                View Case Study
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                >
+                  <path d="M5 12h14M13 6l6 6-6 6" />
+                </svg>
+              </button>
+            </div>
+          </article>
+
+          <!-- 03 -->
+          <article class="case" data-cat="data compliance">
+            <div class="case-media">
+              <img
+                src="images/case-studies/image-car3.png"
+                alt="Abstract translucent glass cubes forming a data structure"
+              />
+            </div>
+            <div class="case-body">
+              <h3>Major Sovereign wealth fund</h3>
+              <p class="case-tags">
+                Data Marketplace Implementation &amp; NDI Compliance Support
+              </p>
+              <p>
+                The sovereign wealth fund of Saudi Arabia aimed to implement a
+                secure and auditable data marketplace with enhanced data
+                accessibility and streamlined governance. Unifi, in partnership
+                with PIF, supported the development of a high-performance
+                platform with improved transparency, strengthened compliance
+                monitoring, and enterprise-wide data exchange.
+              </p>
+              <button class="btn-blue" type="button">
+                View Case Study
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                >
+                  <path d="M5 12h14M13 6l6 6-6 6" />
+                </svg>
+              </button>
+            </div>
+          </article>
+
+          <!-- 04 -->
+          <article class="case" data-cat="compliance cloud">
+            <div class="case-media">
+              <img
+                src="images/case-studies/img-4.png"
+                alt="Glowing blue wireframe network sphere of connected nodes"
+              />
+            </div>
+            <div class="case-body">
+              <h3>Qatar&apos;s Data Governance Authority</h3>
+              <p class="case-tags grad-blue" style="display: inline-block">
+                Document Intelligence – Governance Authority Compliance Support
+              </p>
+              <p>
+                The Governance Authority (Governance Authority) of Qatar wanted
+                to establish an end-to-end data marketplace that enables secure,
+                governed, and scalable data access, with robust onboarding,
+                publishing, and subscription mechanisms supported by monitoring
+                and auditability. Governance Authority partnered with Unifi to
+                achieve this with a cloud-native architecture integrated with
+                enterprise data management services.
+              </p>
+              <button class="btn-blue" type="button">
+                View Case Study
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                >
+                  <path d="M5 12h14M13 6l6 6-6 6" />
+                </svg>
+              </button>
+            </div>
+          </article>
+
+          <!-- 05 -->
+          <article class="case" data-cat="compliance data">
+            <div class="case-media">
+              <img
+                src="images/case-studies/img 5.png"
+                alt="Glowing blue digital map of Saudi Arabia covered in network nodes"
+              />
+            </div>
+            <div class="case-body">
+              <h3>Saudi Data &amp; Authority</h3>
+              <p class="case-tags">NDMO Policy and Standards</p>
+              <p>
+                The Saudi Data &amp; AI Authority is leading the Kingdom&apos;s
+                national drive to make Saudi Arabia a global leader in data and
+                AI. As part of the mandate, SDAIA was tasked with implementing
+                the National Data Management Office (NDMO) policies across all
+                government agencies.
+              </p>
+              <button class="btn-blue" type="button">
+                View Case Study
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                >
+                  <path d="M5 12h14M13 6l6 6-6 6" />
+                </svg>
+              </button>
+            </div>
+          </article>
+
+          <!-- 06 -->
+          <article class="case" data-cat="cloud compliance">
+            <div class="case-media">
+              <img
+                src="images/case-studies/img6.png"
+                alt="Dark operations control room with a curved wall of blue data dashboards"
+              />
+            </div>
+            <div class="case-body">
+              <h3>Social Development Bank</h3>
+              <p class="case-tags">
+                Cloud Modernization, Data Marketplace Enablement &amp; NDI
+                Compliance Support
+              </p>
+              <p>
+                Social Development Bank embarked on a full-scale data
+                modernization journey, moving from a fragmented on-premises
+                ecosystem (SQL Server, Oracle) to a cloud-native platform on
+                Microsoft Fabric, powered by Informatica IDMC. The goal was to
+                unify data, establish a trusted 360° customer view, and enable
+                advanced analytics and reporting for enterprise KPIs, aligned
+                with their compliance journey for NDI &amp; NDMO.
+              </p>
+              <button class="btn-blue" type="button">
+                View Case Study
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                >
+                  <path d="M5 12h14M13 6l6 6-6 6" />
+                </svg>
+              </button>
+            </div>
+          </article>
+
+          <!-- 07 -->
+          <article class="case" data-cat="cloud data">
+            <div class="case-media">
+              <img
+                src="images/case-studies/img7.png"
+                alt="Dark office at night with desks of monitors showing blue analytics dashboards"
+              />
+            </div>
+            <div class="case-body">
+              <h3>Social Development Bank</h3>
+              <p class="case-tags">
+                AI-Powered Contextual Data Classification for Secure Cloud
+                Migration
+              </p>
+              <p>
+                Social Development Bank embarked on a full-scale data
+                modernization journey, moving from a fragmented on-premises
+                ecosystem (SQL Server, Oracle) to a cloud-native platform on
+                Microsoft Fabric, powered by Informatica IDMC. The goal was to
+                unify data, establish a trusted 360° customer view, and enable
+                advanced analytics and reporting for enterprise KPIs, aligned
+                with their compliance journey for NDI &amp; NDMO.
+              </p>
+              <button class="btn-blue" type="button">
+                View Case Study
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                >
+                  <path d="M5 12h14M13 6l6 6-6 6" />
+                </svg>
+              </button>
+            </div>
+          </article>
+
+          <!-- 08 -->
+          <article class="case" data-cat="data compliance">
+            <div class="case-media">
+              <img
+                src="images/case-studies/img8.png"
+                alt="Executive office at dusk overlooking a Middle Eastern city skyline"
+              />
+            </div>
+            <div class="case-body">
+              <h3>Ministry of Tourism</h3>
+              <p class="case-tags">
+                MDM Deployment &amp; NDI Compliance Support
+              </p>
+              <p>
+                The Ministry of Tourism undertook a data modernization
+                initiative to move from a fragmented on-premises landscape to a
+                cloud-based platform using Informatica IDMC. The program focused
+                on establishing governed master data, improving data quality and
+                integration, and supporting NDI/NDMO compliance through
+                audit-ready workflows, enabling consistent and data-driven
+                operations.
+              </p>
+              <button class="btn-blue" type="button">
+                View Case Study
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                >
+                  <path d="M5 12h14M13 6l6 6-6 6" />
+                </svg>
+              </button>
+            </div>
+          </article>
+
+          <!-- 09 -->
+          <article class="case" data-cat="cloud compliance">
+            <div class="case-media">
+              <img
+                src="images/case-studies/img9.png"
+                alt="View from a dark high-rise office over a glowing city skyline at blue hour"
+              />
+            </div>
+            <div class="case-body">
+              <h3>Royal Commission for Riyadh City (Ongoing)</h3>
+              <p class="case-tags">
+                Cloud Modernization &amp; NDI Compliance Support
+              </p>
+              <p>
+                RCRC is undertaking a data governance and modernization program
+                to enhance NDI maturity for MDM &amp; R&amp;D domains. Unifi is
+                providing consulting support for developing audit-ready
+                evidences aligned to NDMO guidelines, alongside enabling
+                GCP-based modernization and implementing Informatica CDGC and
+                MDM. The initiative is improving data visibility, governance,
+                and compliance, supported by training and operational enablement
+                for sustained adoption.
+              </p>
+              <button class="btn-blue" type="button">
+                View Case Study
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                >
+                  <path d="M5 12h14M13 6l6 6-6 6" />
+                </svg>
+              </button>
+            </div>
+          </article>
+
+          <!-- 10 -->
+          <article class="case" data-cat="data">
+            <div class="case-media">
+              <img
+                src="images/case-studies/img10.png"
+                alt="Dark grey electric SUV on a road at dusk with a city skyline behind"
+              />
+            </div>
+            <div class="case-body">
+              <h3>Major Electric Car Manufacturing Company</h3>
+              <p class="case-tags">
+                Informatica IDMC – MDM, DG, CDQ, Governance Workflows
+              </p>
+              <p>
+                Case Motors is Saudi Arabia&apos;s first domestic electric
+                vehicle (EV) brand. Launched in late2022 by Crown Prince
+                Mohammed bin Salman alongside the Public Investment Fund(PIF),
+                it serves as a cornerstone of the Saudi Vision 2030 initiative
+                to diversify the economy away from oil and build a local
+                high-tech manufacturing sector.
+              </p>
+              <button class="btn-blue" type="button">
+                View Case Study
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                >
+                  <path d="M5 12h14M13 6l6 6-6 6" />
+                </svg>
+              </button>
+            </div>
+          </article>
+
+          <!-- 11 -->
+          <article class="case" data-cat="data cloud">
+            <div class="case-media">
+              <img
+                src="images/case-studies/img11.png"
+                alt="Macro photograph of a motherboard with faintly glowing blue circuit traces"
+              />
+            </div>
+            <div class="case-body">
+              <h3>Governance Authority of Qatar</h3>
+              <p class="case-tags">Data Marketplace Design Deployment</p>
+              <p>
+                The Governance Authority (Governance Authority) of Qatar wanted
+                to establish an end-to-end data marketplace that enables secure,
+                governed, and scalable data access, with robust onboarding,
+                publishing, and subscription mechanisms supported by monitoring
+                and auditability. Governance Authority partnered with Unifi to
+                achieve this with a cloud-native architecture integrated with
+                enterprise data management services.
+              </p>
+              <button class="btn-blue" type="button">
+                View Case Study
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                >
+                  <path d="M5 12h14M13 6l6 6-6 6" />
+                </svg>
+              </button>
+            </div>
+          </article>
+
+          <!-- 12 -->
+          <article class="case" data-cat="compliance data">
+            <div class="case-media">
+              <img
+                src="images/case-studies/img12.png"
+                alt="Dark government operations office at night with monitors showing blue data panels"
+              />
+            </div>
+            <div class="case-body">
+              <h3>Major Govt Agency</h3>
+              <p class="case-tags">
+                Data Governance Framework Activation &amp; NDMO Compliance
+                Support
+              </p>
+              <p>
+                MobiMAH undertook a data governance and compliance program to
+                align with NDMO guidelines and enhance NDI maturity. The
+                initiative focused on developing audit-ready evidences,
+                implementing Informatica CDGC and MDM for metadata and master
+                data management, and enabling improved data visibility,
+                governance, and compliance, supported by training for sustained
+                adoption.
+              </p>
+              <button class="btn-blue" type="button">
+                View Case Study
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                >
+                  <path d="M5 12h14M13 6l6 6-6 6" />
+                </svg>
+              </button>
+            </div>
+          </article>
+
+          <!-- 13 -->
+          <article class="case" data-cat="data cloud">
+            <div class="case-media">
+              <img
+                src="images/case-studies/img13.png"
+                alt="Satellite night view of the Qatar peninsula with a cluster of city lights"
+              />
+            </div>
+            <div class="case-body">
+              <h3>Governance Authority (Governance Authority) of Qatar</h3>
+              <p class="case-tags">Data Quality and MDM Implementation</p>
+              <p>
+                The Governance Authority (Governance Authority) of Qatar
+                initiated a national-level compliance and modernization program
+                to build a trusted, cloud-native data platform. The objective
+                was to establish a centralized data foundation that ensures
+                quality, governance, and interoperability across ministries and
+                national agencies. Governance Authority partnered with Unifi to
+                implement Informatica IDMC and Oracle Cloud to achieve these
+                outcomes.
+              </p>
+              <button class="btn-blue" type="button">
+                View Case Study
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                >
+                  <path d="M5 12h14M13 6l6 6-6 6" />
+                </svg>
+              </button>
+            </div>
+          </article>
+
+          <!-- 14 -->
+          <article class="case" data-cat="cloud data">
+            <div class="case-media">
+              <img
+                src="images/case-studies/img14.png"
+                alt="Dark workspace with monitors showing a blue chat interface and analytics panels"
+              />
+            </div>
+            <div class="case-body">
+              <h3>Governance Authority (Governance Authority) of Qatar</h3>
+              <p class="case-tags">SAG Chat Bot Marketplace AI Assistant</p>
+              <p>
+                The Governance Authority (Governance Authority) of Qatar wanted
+                to establish an end-to-end data marketplace that enables secure,
+                governed, and scalable data access, with robust onboarding,
+                publishing, and subscription mechanisms supported by monitoring
+                and auditability. Governance Authority partnered with Unifi to
+                achieve this with a cloud-native architecture integrated with
+                enterprise data management services.
+              </p>
+              <button class="btn-blue" type="button">
+                View Case Study
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                >
+                  <path d="M5 12h14M13 6l6 6-6 6" />
+                </svg>
+              </button>
+            </div>
+          </article>
+
+          <p class="empty" id="emptyState" hidden>
+            No case studies in this category yet.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+    <div class="foot-shell">
+      <footer>
+        <div class="foot-top">
+          <div>
+            <a class="logo" href="home.html" style="color: #111319"
+              ><span class="u">U</span>nifi</a
+            >
+            <p>Experience the future of data.</p>
+          </div>
+          <div class="col">
+            <h5>About</h5>
+            <a href="home.html">Home</a><a href="about.html">About Us</a
+            ><a href="#">Experts</a><a href="#">Why Choose Us</a
+            ><a href="#">Locations</a
+            ><a href="case-studies.html">Case Studies</a>
+          </div>
+          <div class="col">
+            <h5>Company</h5>
+            <a href="#">Master Data Management</a><a href="#">AI/ML</a
+            ><a href="#">Data Quality</a><a href="#">Data Governance</a
+            ><a href="#">Data Integration</a><a href="#">Cloud Modernization</a
+            ><a href="#">Big Data Analytics</a><a href="#">Data Lake</a
+            ><a href="#">Advanced Analytics</a>
+          </div>
+          <div class="col">
+            <h5>Support</h5>
+            <a href="#">Careers</a><a href="#">Contact Us</a
+            ><a href="#">Customer Support</a>
+          </div>
+        </div>
+        <div class="foot-bottom">
+          Copyright © 2024, Unifi Data Management Consultancy |
+          <a href="#">Privacy Policy</a>
+        </div>
+      </footer>
+    </div>
+
+    <script>
+      /* ---- category filter ---- */
+      (function () {
+        var pills = Array.prototype.slice.call(
+          document.querySelectorAll(".pills button"),
+        );
+        var cards = Array.prototype.slice.call(
+          document.querySelectorAll(".case"),
+        );
+        var empty = document.getElementById("emptyState");
+
+        function apply(filter) {
+          var shown = 0;
+          cards.forEach(function (card) {
+            var cats = (card.getAttribute("data-cat") || "").split(/\s+/);
+            var match = filter === "all" || cats.indexOf(filter) !== -1;
+            card.hidden = !match;
+            if (match) shown++;
+          });
+          empty.hidden = shown !== 0;
+          restripe();
+        }
+
+        /* keep the image side alternating no matter which cards are visible */
+        function restripe() {
+          var i = 0;
+          cards.forEach(function (card) {
+            if (card.hidden) return;
+            card.classList.toggle("flip", i % 2 === 1);
+            card.classList.toggle("tint", i % 4 === 1 || i % 4 === 3);
+            i++;
+          });
+        }
+
+        pills.forEach(function (pill) {
+          pill.addEventListener("click", function () {
+            pills.forEach(function (p) {
+              p.setAttribute("aria-selected", String(p === pill));
+            });
+            apply(pill.getAttribute("data-filter"));
+          });
+        });
+
+        restripe();
+      })();
+    </script>
+
+    <script>
+      /* Services dropdown: opens on hover (pointer) and on click / keyboard (a11y) */
+      (function () {
+        var menu = document.getElementById("svcMenu");
+        var trigger = document.getElementById("svcTrigger");
+        if (!menu || !trigger) return;
+
+        function setOpen(open) {
+          menu.dataset.open = open ? "true" : "false";
+          trigger.setAttribute("aria-expanded", open ? "true" : "false");
+        }
+
+        // Decide hover-vs-tap from the actual pointer that generated the event rather
+        // than a device media query, which misreports in webviews and headless browsers.
+        var hovering = false;
+
+        menu.addEventListener("pointerenter", function (e) {
+          if (e.pointerType === "mouse") {
+            hovering = true;
+            setOpen(true);
+          }
+        });
+        menu.addEventListener("pointerleave", function (e) {
+          if (e.pointerType === "mouse") {
+            hovering = false;
+            setOpen(false);
+          }
+        });
+
+        trigger.addEventListener("click", function (e) {
+          e.stopPropagation();
+          // a mouse is already hovering, so the panel is open - never toggle it shut
+          // underneath the pointer; taps (no hover) get a normal toggle.
+          setOpen(hovering ? true : menu.dataset.open !== "true");
+        });
+
+        // keyboard
+        trigger.addEventListener("keydown", function (e) {
+          if (e.key === "ArrowDown" || e.key === "Enter" || e.key === " ") {
+            e.preventDefault();
+            setOpen(true);
+            var first = menu.querySelector(".menu-panel a");
+            if (first) first.focus();
+          }
+        });
+        menu.addEventListener("keydown", function (e) {
+          if (e.key === "Escape") {
+            setOpen(false);
+            trigger.focus();
+          }
+        });
+        menu.addEventListener("focusout", function (e) {
+          if (!menu.contains(e.relatedTarget)) setOpen(false);
+        });
+
+        // click outside
+        document.addEventListener("click", function (e) {
+          if (!menu.contains(e.target)) setOpen(false);
+        });
+      })();
+    </script>
+  </body>
+</html>
